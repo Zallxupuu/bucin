@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLOWW</title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .gambar{
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff00cc, #3333ff, #ececec);
+  padding: 6px;
+
+  /* Trick to create visible gradient border */
+  -webkit-mask: 
+    radial-gradient(circle, #000 96%, transparent 100%);
+  mask: 
+    radial-gradient(circle, #000 96%, transparent 100%);
+
+  object-fit: cover;
+  display: block;
+        }
+
+        .card-bg{
+            background: linear-gradient(230deg, #ff00cc, #3333ff, #ececec);
+        }
+
+        .btn-github{
+            background-color: #000000;
+transition: ease-in-out .3s;
+        }
+        .btn-github:hover{
+            transform: scale(1.05);
+            background-color: #383838;
+        }
+
+        .icon-size{
+            font-size: 30px;
+        }
+
+        .glass-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), inset 4px 6px 10px white, inset -2px -3px 10px black;
+}
+
+    .emoji {
+        position: absolute;
+        top: -2em;
+        font-size: 2em;
+        animation: fall linear;
+        user-select: none;
+        pointer-events: none;
+        z-index: -999;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+            opacity: 0;
+        }
+    }
+
+    .bg-body{
+        background: #000000;
+background: linear-gradient(333deg, rgba(0, 0, 0, 1) 0%, rgba(110, 110, 110, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .btn-shadow{
+        box-shadow:  0 4px 30px rgba(0, 0, 0, 0.2), inset 1px 2px 10px rgba(255, 255, 255, 0.39), inset -2px -3px 10px black;
+    }
+
+    </style>
+</head>
+<body class="bg-body">
+    <div class="container py-3 px-5">
+        <div class="card px-3 py-3 glass-card">
+                <img src="./assets/image/nisa.jpeg" alt="" width="200" class="mx-auto gambar">
+            <p class="text-center mt-3 fw-bold text-light text-uppercase">🎉Selamat Ulang Tahun🎉</p>
+            <h2 class="text-center w-75 fw-bold text-light mx-auto">Khairulnisa Azzahra Christin fadillah</h2>
+
+            <div class="container mt-4">
+                <p class="fw-semibold text-light">Who's make this website?</p>
+                <p class="fw-bold text-light">visit my Social Media : </p>
+
+                <a href="" class="d-block link-underline link-underline-opacity-0 mb-3 ">
+                    <div class="py-2 px-4 bg-instagram btn btn-github d-block btn-shadow">
+                        <div class="d-flex align-items-center text-light">
+                            <i class="fa-brands fa-instagram icon-size"></i>
+                            <h2 class="text-center">@sunnyset.m</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="d-block link-underline link-underline-opacity-0 mb-3">
+                    <div class="py-2 px-4 bg-instagram btn btn-github d-block btn-shadow">
+                        <div class="d-flex align-items-center text-light">
+                            <i class="fa-brands fa-tiktok icon-size"></i>
+                            <h2 class="text-center">@zskyfall.low</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="d-block link-underline link-underline-opacity-0 mb-3">
+                    <div class="py-2 px-4 bg-instagram btn btn-github d-block btn-shadow">
+                        <div class="d-flex align-items-center text-light ">
+                            <i class="fa-brands fa-github icon-size"></i>
+                            <h2 class="text-center">@ZallXupuuu</h2>
+                        </div>
+                    </div>
+                </a>
+                </div>
+
+                            <a href="./message/index.html" class="btn btn-success fw-bold text-white my-3">TEKAN UNTUK LANJUT HALAMAN</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/js/bootstrap.min.js"></script>
+
+    <script>
+    const emojis = ["🥳", "🎉", "❤️", "🎂"];
+
+    function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = (Math.random() * 4 + 2) + "s";
+      emoji.style.fontSize = (Math.random() * 50 + 20) + "px";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 10000);
+    }
+
+    setInterval(createEmoji, 200); // faster rain
+</script>
+</body>
+</html>

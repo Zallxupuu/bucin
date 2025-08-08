@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../src/css/animate.min.css">
+    <title>Document</title>
+
+    <style>
+        .shadow-red{
+            box-shadow: 0px 4px 15px rgb(238, 43, 43);
+        }
+        .shadow-white{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.26);
+        }
+
+        .threeD-shadow{
+            box-shadow:inset 2px 4px 6px white, 2px 4px 10px rgba(0, 0, 0, 0.438);
+        }
+
+        .circle-shadow{
+            box-shadow:inset 2px 4px 4px white, 0px 4px 10px rgb(255, 65, 65);
+        }
+
+    .emoji {
+        position: absolute;
+        top: -2em;
+        font-size: 2em;
+        animation: fall linear;
+        user-select: none;
+        pointer-events: none;
+        z-index: -999;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+            opacity: 0;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container py-3 mb-5">
+        <div class="container text-center py-2 bg-danger bg-gradient rounded-4 my-3 animate__animated animate__pulse animate__infinite animate__delay-1s  shadow-red">
+        <h1 class="text-light fw-bold fs-1">!!HAPPY BIRTHDAY!!</h1>
+        </div>
+    </div>
+
+    <div class="container py-3 bg-danger bg-gradient w-75 rounded-2 shadow-red mb-3">
+        <h4 class="text-light text-center fw-bold text-uppercase">Hallloowww!!</h4>
+        <p class="text-light text-center fw-semibold ">Khairulnisa Azzahra Christin Fadillah</p>
+        <p class="text-light-emphasis bg-light-subtle px-2 py-2 rounded-1 shadow-white"><q>Selamat ulang tahun yang ke-17, proud of you girl bisa sehebat sekarang ini!, makasih yaa udah mau baca ini hehe, aku cuman mau minta waktunya sebentar aja kok, aku cuman mau bilang, sehat selalu, panjang umur, diberi kelancaran dalam menggapai cita citanya, rajin ibadah, selalu nurut sama orang tua, diberi kekuatan saat mengahadapi hal apapun, semoga semua doanya terkabulkan, bisa membahagiakan orang tua selalu, dan jadi anak yang sholehah, Amiin!!, makasih yaa udah baca pesan ini!! ga cuman ini, aku juga punya game kecil" an kok buat kamu, kamu scroll ke atas, kamu tinggal mau mainin yang mana, gamenya seru kok, mudah mudahan bisa ngehibur kamu ya!!</q></p>
+    </div>
+
+    <div class="container mb-3 mt-5">
+        <div class="container py-3  bg-primary bg-gradient rounded-pill w-75 threeD-shadow animate__animated animate__pulse animate__infinite animate__slow d-flex justify-content-center align-items-center" onclick="tebakAngka()">
+            <div>
+                <span class="rounded-circle bg-danger d-flex circle-shadow" style="width: 75px; height: 75px;"></span>
+            </div>
+            <div class="container">
+                <h1 class="fw-bold text-light text-uppercase">KERTAS BATU GUNTING</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3 mt-5">
+        <div class="container py-3  bg-primary bg-gradient rounded-pill w-75 threeD-shadow animate__animated animate__pulse animate__infinite animate__slow d-flex justify-content-center align-items-center">
+            <div>
+                <span class="rounded-circle bg-danger d-flex circle-shadow" style="width: 75px; height: 75px;"></span>
+            </div>
+            <div class="container">
+                <h1 class="fw-bold text-light text-uppercase">Tebak Angka</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3 mt-5">
+        <div class="container py-3  bg-primary bg-gradient rounded-pill w-75 threeD-shadow animate__animated animate__pulse animate__infinite animate__slow d-flex justify-content-center align-items-center">
+            <div>
+                <span class="rounded-circle bg-danger d-flex circle-shadow" style="width: 75px; height: 75px;"></span>
+            </div>
+            <div class="container">
+                <h1 class="fw-bold text-light text-uppercase">GAME ULAR</h1>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const emojis = ["🥳", "🎉", "❤️", "🎂"];
+
+    function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = (Math.random() * 4 + 2) + "s";
+      emoji.style.fontSize = (Math.random() * 50 + 20) + "px";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 10000);
+    }
+
+    setInterval(createEmoji, 200); // faster rain
+</script>
+
+<script>
+    function tebakAngka(){
+        window.location.href = "tebak.html";
+    }
+</script>
+
+    <script src="../src/js/bootstrap.min.js"></script>
+</body>
+</html>
